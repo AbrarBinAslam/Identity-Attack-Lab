@@ -116,46 +116,202 @@ Today, protecting identities is a shared responsibility between IAM engineers, S
 
 ---
 
-## 🛡 Detection & Defense
+---
 
-> *Content coming soon...*
+# 🛡 Detection & Defense
+
+Identity attacks rarely begin with malware. Most begin with a seemingly legitimate authentication attempt. Detecting these attacks requires monitoring authentication behavior, user activity, privileged access, and identity-related events rather than relying solely on traditional endpoint or network security.
+
+## Common Detection Indicators
+
+Security teams monitor for:
+
+- Multiple failed logins from different locations
+- Impossible travel logins
+- Password spraying attempts
+- Brute-force authentication attempts
+- Privileged account logins outside business hours
+- Multiple MFA prompts (MFA fatigue)
+- Unusual VPN access
+- Creation of privileged accounts
+- Unexpected group membership changes
+- Service account abuse
+- Authentication from TOR or anonymous IP addresses
+- Suspicious OAuth consent grants
+- Dormant account usage
+- Lateral movement between systems
+
+Enterprise SIEM solutions such as Microsoft Sentinel, Splunk, QRadar, Exabeam, and Sumo Logic correlate these events to identify suspicious identity behavior.
 
 ---
 
-## 🧪 Hands-on Lab
+## Common Defense Strategies
 
-> *Content coming soon...*
+Modern enterprises defend identities using multiple security layers.
+
+### Identity Protection
+
+- Multi-Factor Authentication (MFA)
+- Passwordless Authentication
+- Strong Password Policies
+- Conditional Access Policies
+- Risk-Based Authentication
+
+### Identity Governance
+
+- Joiner-Mover-Leaver (JML)
+- Least Privilege Access
+- Role-Based Access Control (RBAC)
+- Periodic Access Reviews
+- Segregation of Duties (SoD)
+
+### Privileged Access Protection
+
+- Privileged Access Management (PAM)
+- Just-In-Time (JIT) Access
+- Just-Enough Administration (JEA)
+- Session Recording
+- Credential Vaulting
+
+### Monitoring & Detection
+
+- Identity Threat Detection
+- UEBA (User and Entity Behavior Analytics)
+- Continuous Authentication
+- Continuous Monitoring
+- Security Information and Event Management (SIEM)
+
+A strong identity security program combines prevention, detection, and rapid response rather than relying on a single security control.
 
 ---
 
-## 💼 Interview Questions
+# 🧪 Hands-on Lab
 
-> *Content coming soon...*
+## Scenario
+
+You are an IAM Engineer supporting a global enterprise.
+
+The SOC team reports the following:
+
+- 143 user accounts received one failed login attempt.
+- Every attempt used the same password.
+- Attempts originated from a foreign IP address.
+- No accounts were locked.
+
+### Questions
+
+1. What attack is occurring?
+2. Why weren't accounts locked?
+3. Which security logs would you investigate?
+4. What should the SOC team do?
+5. What long-term controls should be implemented?
+
+### Expected Answer
+
+This is a **Password Spraying Attack**.
+
+The attacker attempts one commonly used password across many accounts to avoid account lockouts while identifying weak passwords.
 
 ---
 
-## 🏥 From the Field
+# 💼 Interview Questions
 
-> *Content coming soon...*
+### Beginner
+
+- What is an identity attack?
+- Why are identity attacks increasing?
+- What is the difference between authentication and authorization?
+- What is MFA?
+- What is RBAC?
+
+### Intermediate
+
+- Explain Password Spraying.
+- Explain Credential Stuffing.
+- What is Pass-the-Hash?
+- What is Kerberoasting?
+- What is Lateral Movement?
+- What is Privilege Escalation?
+
+### Enterprise
+
+- How would you detect identity attacks in Microsoft Sentinel?
+- Which logs would you monitor?
+- How does Zero Trust reduce identity attacks?
+- How would you secure privileged identities?
+- Explain Identity Governance in enterprise environments.
 
 ---
 
-## 📌 Key Takeaways
+# 🏥 From the Field
 
-- Identity has become one of the primary targets of modern cyberattacks.
-- Compromised identities often allow attackers to bypass traditional security controls.
-- Strong identity hygiene significantly reduces the risk of compromise.
-- Modern enterprises rely on IAM, PAM, MFA, Zero Trust, and continuous monitoring to protect identities.
-- Understanding identity attacks is fundamental for every cybersecurity professional.
+One of the biggest misconceptions in cybersecurity is that attackers always exploit software vulnerabilities.
 
----
+In reality, many successful attacks begin with compromised identities.
 
-## 📚 References
+Once attackers obtain valid credentials, they often bypass traditional security controls because they appear to be legitimate users.
 
-> *Content coming soon...*
+For this reason, modern enterprises invest heavily in Identity & Access Management (IAM), Privileged Access Management (PAM), Identity Governance (IGA), Multi-Factor Authentication (MFA), and Zero Trust architectures.
+
+Identity security is no longer just an IAM responsibility—it is a shared responsibility across security operations, cloud security, infrastructure, governance, and IT operations.
 
 ---
 
-## ➡️ Next Repository
+# 📌 Key Takeaways
 
-**Enterprise Active Directory Lab**
+- Identity is one of the most valuable assets in modern cybersecurity.
+- Most modern attacks target trusted identities rather than systems.
+- Identity attacks abuse trust instead of exploiting vulnerabilities.
+- Strong identity hygiene significantly reduces organizational risk.
+- IAM, PAM, MFA, Zero Trust, and continuous monitoring form the foundation of enterprise identity security.
+- Understanding identity attacks is essential for every cybersecurity professional.
+
+---
+
+# 📚 References
+
+Recommended learning resources:
+
+- Microsoft Learn
+- Microsoft Defender for Identity Documentation
+- Microsoft Entra Documentation
+- MITRE ATT&CK Framework
+- OWASP Identity & Access Control Guidance
+- CISA Identity and Access Management Resources
+- NIST Cybersecurity Framework (CSF)
+- NIST SP 800-63 Digital Identity Guidelines
+
+---
+
+# 🚀 What's Next?
+
+Continue your journey with:
+
+## Enterprise Active Directory Lab
+
+In the next repository, you'll learn:
+
+- Active Directory Architecture
+- Domains
+- Forests
+- Domain Controllers
+- Organizational Units (OUs)
+- Users & Groups
+- Group Policy (GPO)
+- Kerberos Authentication
+- NTLM Authentication
+- Enterprise Administration
+- AD Security Best Practices
+- Common AD Attacks
+
+---
+
+## About Haris Trust
+
+**Haris Trust** is a personal initiative dedicated to building practical, enterprise-focused cybersecurity learning resources.
+
+The goal is to simplify complex cybersecurity topics through hands-on labs, real-world enterprise scenarios, clear documentation, and interview-focused learning.
+
+> **Haris Trust**
+>
+> *Guarding Digital Trust.*
